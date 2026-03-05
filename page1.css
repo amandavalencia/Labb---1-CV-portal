@@ -1,0 +1,131 @@
+@import "./variables.css";
+
+/* ── CV page styles ───────────────────────────────── */
+.header-container {
+  margin: 50px 0 50px 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.two-containers-wrapper {
+  display: flex;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: var(--bg-card);
+  align-items: center;
+  padding: 20px;
+  color: var(--text-main);
+  border-radius: 20px;
+  padding-bottom: 100px;
+}
+.left-container-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0 50px 0;
+}
+.left-container-text li {
+  list-style: none;
+}
+
+/* ── Contact icon list ────────────────────────────── */
+.contact-list {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.contact-list a {
+  display: flex;
+  color: var(--text-main);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.contact-list a:hover {
+  color: var(--brown-primary);
+  transform: scale(1.15);
+}
+
+.contact-list svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ── img section ─────────────────────────── */
+.profile-img {
+  width: 200px;
+}
+.profile-img-wrapper {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* ── educations section ─────────────────────────── */
+/* ── Jobs section ─────────────────────────── */
+.info-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Job entry ─────────────────────────── */
+.job-header {
+  background-color: var(--bg-card);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.job-card {
+  padding: 10px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.job-card ul {
+  padding-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.job-card li {
+  margin-bottom: 0.3rem;
+}
+
+.job-card p {
+  margin-bottom: 0.6rem;
+}
+
+.job-card .meta {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .two-containers-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+  }
+}

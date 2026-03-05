@@ -1,0 +1,21 @@
+/* ── Design tokens ────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-main: #eeecde;
+  --bg-card: rgba(182, 150, 128, 0.25);
+  --bg-card-2: #dff0e6;
+
+  /* primary colors (brown + blue) */
+  --blue-primary: #11424b;
+  --brown-hover: #8a663a;
+  --brown-soft: #b6a08b;
+
+  /* Accent tones  */
+  --accent-blue: #7db7ce;
+  --accent-rust: #7a3f24;
+  --accent-dusty-pink: #c98f8b;
+
+  /* Text */
+  --text-main: #2d4853;
+  --text-muted: #5e6c6e;
+}

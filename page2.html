@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – My Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-logo">Amanda Valencia</div>
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="page1.html">CV</a></li>
+          <li><a href="page2.html" class="active">My Projects</a></li>
+          <li><a href="page3.html">Lorem</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <div class="content-wrapper">
+        <section class="projects-section">
+          <h1>My Projects</h1>
+          <p class="section-sub">Ett urval av saker jag har byggt.</p>
+
+          <div class="projects-grid">
+            <!-- Card 1 -->
+            <article class="project-card">
+              <div class="project-card-body">
+                <h3>LIA4U</h3>
+                <p>
+                  Ett skolprojekt utvecklat tillsammans med klasskamrater där vi
+                  byggde en webapp för att hjälpa studenter hitta företag inför
+                  sin LIA. Applikationen hämtar jobbannonser via
+                  Arbetsförmedlingens öppna API.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">CSS</span>
+                </div>
+                <button class="project-btn" data-modal="modal-1">
+                  Läs mer
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="project-card">
+              <div class="project-card-body">
+                <h3>Pt Karlsson</h3>
+                <p>
+                  En hemsida utvecklad för en personlig tränare som vill sälja
+                  träningsvideor inom kampsport online. Plattformen är designad
+                  för att presentera träningsinnehåll, bygga ett personligt
+                  varumärke och göra det enkelt för besökare att ta del av och
+                  köpa träningsprogram.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Supabase</span>
+                  <span class="tag">Tailwind</span>
+                </div>
+                <button class="project-btn" data-modal="modal-2">
+                  Läs mer
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── Modals ─────────────────────────────────────── -->
+
+    <div class="modal-overlay" id="modal-1">
+      <div class="modal-card">
+        <button class="modal-close" aria-label="Stäng">&times;</button>
+        <h2>LIA4U</h2>
+        <p>
+          Detta projekt utvecklades som ett skolprojekt tillsammans med mina
+          klasskamrater. Målet var att skapa ett verktyg där studenter kan söka
+          på ett yrke inför sin LIA och få upp relevanta företag som potentiellt
+          erbjuder praktikplatser.
+        </p>
+
+        <p>
+          Applikationen hämtar data från Arbetsförmedlingens öppna API för
+          jobbannonser och presenterar resultaten i ett enkelt och sökbart
+          gränssnitt. Designen är inspirerad av Arbetsförmedlingens designsystem
+          för typografi och struktur, men med ett eget färgtema.
+        </p>
+
+        <p>Några saker jag fokuserade på:</p>
+
+        <ul>
+          <li>Dynamisk hämtning och rendering av data från ett externt API</li>
+          <li>
+            Strukturerad CSS med custom properties för ett mer konsekvent
+            designsystem
+          </li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">CSS</span>
+        </div>
+        <div class="modal-links">
+          <a href="https://github.com/amandavalencia/LIA4U.git" target="_blank"
+            >GitHub</a
+          >
+          <a href="https://lia4u.netlify.app/" target="_blank">Hemsida</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-2">
+      <div class="modal-card">
+        <button class="modal-close" aria-label="Stäng">&times;</button>
+        <h2>PT Karlsson</h2>
+
+        <p>
+          En hemsida utvecklad för en personlig tränare med fokus på
+          kampsportsträning. Syftet med projektet är att skapa en plattform där
+          tränaren kan presentera sina tjänster och erbjuda träningsvideor
+          online.
+        </p>
+
+        <p>
+          Projektet är fortfarande under utveckling och fungerar även som ett
+          sätt för mig att utforska nya verktyg och tekniker, bland annat
+          Supabase för backend och datalagring.
+        </p>
+
+        <p>Några saker jag fokuserade på:</p>
+
+        <ul>
+          <li>Att integrera och arbeta med Supabase för backend och databas</li>
+          <li>
+            Strukturera en hemsida för att presentera och sälja digitalt
+            träningsinnehåll
+          </li>
+          <li>Autentisering (registrering, inloggning och utloggning)</li>
+          <li>Rollbaserad åtkomst (t.ex. user vs admin) och skyddade sidor</li>
+        </ul>
+
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Supabase</span>
+        </div>
+        <div class="modal-links">
+          <a
+            href="https://github.com/amandavalencia/PT-Karlsson.git"
+            target="_blank"
+            >GitHub</a
+          >
+          <a href="https://pt-karlsson.netlify.app/" target="_blank">Hemsida</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

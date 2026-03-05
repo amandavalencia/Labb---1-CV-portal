@@ -1,0 +1,213 @@
+@import "./variables.css";
+@import "./page1.css";
+@import "./page2.css";
+
+/* ── Reset & base ─────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* ── Navbar ───────────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+  background-color: transparent;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--blue-primary);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--brown-soft);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--brown-hover);
+}
+
+.nav-links a.active {
+  color: var(--blue-primary);
+  border-bottom-color: var(--blue-primary);
+}
+
+/* ── Hamburger (mobile) ───────────────────── */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ── Main content─────────────────────────── */
+.page-content {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.page-content p {
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* ── Content wrapper ──────────────────────────────── */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 960px;
+  width: 100%;
+  flex: 1;
+}
+
+/* ── Background blobs ─────────────────────────────── */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob-1 {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(125, 183, 206, 0.45) 0%,
+    rgba(17, 66, 75, 0.2) 60%
+  );
+  top: -100px;
+  left: -120px;
+  box-shadow: 0 0 80px rgba(125, 183, 206, 0.25);
+}
+
+.blob-2 {
+  width: 600px;
+  height: 460px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 143, 139, 0.4) 0%,
+    rgba(122, 63, 36, 0.15) 60%
+  );
+  bottom: -80px;
+  right: -100px;
+  box-shadow: 0 0 80px rgba(201, 143, 139, 0.2);
+}
+
+/* ── Home hero layout ─────────────────────────────── */
+.home-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(238, 236, 222, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 40px rgba(60, 80, 80, 0.12);
+  z-index: 1;
+}
+
+.home-text {
+  align-self: center;
+  padding: 30px 0 30px 10px;
+}
+.home-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.home-text p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.border-top {
+  padding-top: 10px;
+  border-top: 0.5px solid var(--brown-soft);
+}
+
+/* ── Secret bg toggle ─────────────────────────────── */
+body.bg-alt {
+  background-color: rgb(248, 248, 195);
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: #1a1a2e;
+    padding: 1rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+}
